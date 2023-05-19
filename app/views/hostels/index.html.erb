@@ -1,2 +1,13 @@
 <h1>Hostels#index</h1>
 <p>Find me in app/views/hostels/index.html.erb</p>
+  <div> 
+      <h1>Select hostel</h1>
+         <%= form_with(model: @student, url: students_path) do |form|%>
+          <%= form.label :Enter you name%>
+           <%= form.text_field :name%>
+           <%=form.label :enter your registrations number%>
+            <%= form.integer :register_number%>
+            <%= form.label :please select hostel %>
+              <%= form.collection_select :hostel_id, Hostel.all, :id, :name, include_blank: true %>
+         <%end%>
+  </div>
