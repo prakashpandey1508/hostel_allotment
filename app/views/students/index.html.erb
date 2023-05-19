@@ -1,24 +1,13 @@
 <h1>Students#index</h1>
 <p>Find me in app/views/students/index.html.erb</p>
-
   <%= form_with(model: @student, url: students_path) do |form| %>
-          <%= form.label :name, 'enter your Name' %>
-           <%= form.text_field :name %>
-           <%= form.label :register_number %>
-            <%= form.text_field :register_number %>
-            <%= form.label :hostel_id %>
-            <%= form.collection_select :hostel_id, Hostel.all, :id, :name, include_blank: true %>
-  <%end %>
-  <%= form_with(model: @student, url: students_path) do |form| %>
-  <%= form.label :name %>
+  <%= form.label :name, "enter you rname" %>
   <%= form.text_field :name %>
 
-  <%= form.label :roll_number %>
-  <%= form.text_field :roll_number %>
+  <%= form.label :register_number,"enter the regeister number" %>
+  <%= form.text_field :register_number %>
 
   <%= form.label :hostel_id %>
   <%= form.collection_select :hostel_id, Hostel.all, :id, :name, include_blank: true %>
-
-
   <%= form.submit %>
 <% end %>
