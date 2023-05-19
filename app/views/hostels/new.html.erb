@@ -1,0 +1,13 @@
+<h1>Hostels#new</h1>
+<p>Find me in app/views/hostels/new.html.erb</p>
+<%= form_for @hostel do |f|%>
+<div class="form-group">
+<%= f.label :name%>
+<%= f.text_field :name,class: "form-control", placeholder: "enter the name of hostel"%>
+</div>
+<div class="form-group">
+<%= f.label :name%>
+<%= f.number_field :room,class: "form-control", placeholder: "enter the total number of room"%>
+</div>
+<%= f.submit "create a hostel",class: "btn btn-primary"%>
+<%end%>
